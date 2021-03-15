@@ -1,28 +1,15 @@
-import Link from 'next/Link';
-import { Container, Paper, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
+import IntroGrid from '../components/IntroGrid';
+import IntroImage from '../components/IntroImage';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        backgroundColor: "white",
-        flexGrow: 1,
-        margin: "0 auto",
-        display: "flex",
-    },
+
     container: {
-        height: "100vh",
-        justifyContent: "center",
-        alignContent: "center"
-
-    },
-    paper: {
-        padding: theme.spacing(5),
-        textAlign: 'center',
-        color: theme.palette.text.primary,
+        backgroundColor: "salmon",
+        justifyContent: "center"
     }
-
 }));
 
 function HomePage() {
@@ -31,13 +18,10 @@ function HomePage() {
     return (
         <>
             <CssBaseline />
-            <div className={classes.root}>
+            <div >
                 <Grid container className={classes.container} >
-                    <Grid item xs={8}>
-                        <Paper className={classes.paper} elevation={7}>
-                            Brett Belka. Full-stack developer
-                        </Paper>
-                    </Grid>
+                    <IntroImage />
+                    <IntroGrid />
                 </Grid>
             </div>
         </>
